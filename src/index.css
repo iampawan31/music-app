@@ -1,13 +1,70 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #ddd;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.c-player {
+  display: block;
+  background-color: #fff;
+  box-shadow: 30px 30px rgba(255, 255, 255, 0.5s);
+  border-radius: 10px;
+}
+
+.c-player--details img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.c-player--details h3 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.c-player--details h4 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.c-player .next-up {
+  text-align: center;
+}
+
+.c-player--controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.c-player--controls .play-button,
+.c-player--controls .skip-button {
+  display: flex;
+  margin: 0 30px;
+  padding: 20px;
+  box-shadow: 0px 50px rgba(255, 255, 255, 0.5);
+  border: none;
+  font-size: 25px;
+  border-radius: 50%;
+}
+
+.c-player--controls .play-button.playing {
+  background-color: green;
+}
+
+.c-player--controls .play-button.not-playing {
+  background-color: red;
 }
