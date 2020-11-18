@@ -7,16 +7,19 @@ import {
   faBackward,
 } from '@fortawesome/free-solid-svg-icons';
 
-function PlayerControls() {
+function PlayerControls(props) {
   return (
     <div className="c-player--controls">
-      <button className="skip-button">
+      <button className="skip-button" onClick={() => props.skipSong(false)}>
         <FontAwesomeIcon icon={faBackward} />
       </button>
-      <button className="play-button">
-        <FontAwesomeIcon icon={faPlay} />
+      <button
+        className="play-button"
+        onClick={() => props.setIsPlaying(!props.isPlaying)}
+      >
+        <FontAwesomeIcon icon={props.isPlaying ? faPause : faPlay} />
       </button>
-      <button className="skip-button">
+      <button className="skip-button" onClick={() => props.skipSong()}>
         <FontAwesomeIcon icon={faForward} />
       </button>
     </div>
